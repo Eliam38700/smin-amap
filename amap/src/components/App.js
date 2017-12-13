@@ -7,7 +7,7 @@ class App extends React.Component{
 		return (
 				<div className ="amap">
 					<div className= "menu">
-						<Header/>
+						<Header tagline="Des bons légumes"/>
 					</div>
 						
 					<Order/>

@@ -1,8 +1,12 @@
 import React from 'react';
+import App from './App';
+import NotFound from './NotFound';
 class StorePicker extends React.Component{
 
 	render(){
-		return (
+		switch(window.location.pathname){
+			case '/home':
+			case '/': return (
 					<form className="store-selector">
 						{/* Comment */}
 						<h2>Entrez un nom de magasin</h2>
@@ -10,7 +14,11 @@ class StorePicker extends React.Component{
 						<button type="submit">Visiter le magasin</button>
 							
 					</form>			 
-				)
+				);
+			case '/store/un-nom-de-shop': return <App/>;
+
+			default: return <NotFound/>
+		}
 	}
 }
 
