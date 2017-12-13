@@ -17,6 +17,8 @@ class AddVeggieForm extends React.Component {
 			desc : this.veggieDesc.value,
 			img : this.veggieImg.value
 		}
+
+		this.props.addVeggie(veggie);
 		console.log(veggie);
 	}
 
